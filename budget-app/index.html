@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<style>
+    i:hover{
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="h1 text-center pt-4 text-bold display-3 mb-3">My Budget App</div>
+        <div class="d-flex flex-column p-3 align-items-center ">
+            <div class="inputs">
+            <div class=" input-group mb-3 me-2 ">
+                <span class="input-group-text  ">Your Budget: </span>
+                <input class="form-control rounded-right" type="number" id="userMoney" min="0"/>    
+                <!-- <button class="btn btn-success" onclick="addMoney()">Add Money</button>  -->
+            </div>
+            <div class=" input-group mb-3 me-2">
+                <span class="input-group-text ">Expenses details:</span>
+                <input class="user form-control" type="text" id="userInput" />   </div>
+                <div class=" input-group mb-3 me-2">
+                <span class="input-group-text ">Cost: </span>
+                <input class="user form-control" type="number" id="userCost" min="0" placeholder="Enter Value"/><br>    
+                 
+            </div>
+        </div>
+            <button class="btn btn-success w-25" onclick="addExpenses()">Add Expenses</button>
+
+        </div>
+        <div class="icons d-flex m-3 justify-content-center mt-5 md:flex-column">
+            <div class="s-icon input-group d-flex input-group-lg w-25 me-5">
+                <span class="icon-input input-group-text p-3 bg-primary d-flex text-white" id="inputGroup-sizing-lg">
+                    <i class="bi bi-wallet h1 text-white"></i>
+                    <p>Budget</p>
+                </span>
+                <span type="number" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"><p class="pt-3 my-2" id="budget"></p></span>
+              </div>
+              <div class="s-icon input-group input-group-lg w-25 me-5">
+                <span class="icon-input input-group-text p-3 bg-warning text-white d-flex" id="inputGroup-sizing-lg"><i class="bi bi-cash h1 text-white"></i><p>Expnses</p></span>
+                <span  class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"><p class="my-2 pt-3" id="expenses"></p></span>
+              </div>
+              <div class="s-icon input-group input-group-lg w-25">
+                <span class="icon-input input-group-text p-3 bg-success text-white d-flex" id="inputGroup-sizing-lg"><i class="bi bi-currency-dollar h1 text-white"></i><p>Balance</p></span>
+                <span type="number" class="form-control p-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"><p class="my-2 pt-3" id="balance"></p></span>
+              </div>
+
+        </div>
+        <div class="list p-3" id="list">
+            <!-- <p class="p-3 bg-secondary rounded text-white ps-3 w-100 d-flex justify-content-between">
+                <span>
+                    <span id="count" class="me-4">456</span>
+                    <span id="name">deep</span>
+                </span>
+                <span id="itemcost">45678</span>
+                <span class="icons" id="icons visually-hidden"><i class="bi bi-pencil-square me-3 p-3 rounded bg-success"></i>
+                    <i class="bi bi-trash me-3 p-3 rounded bg-danger" id="danger" onclick="del()"></i></span>
+            </p> -->
+        </div>
+        <div class="reset text-center">
+            <button class="btn btn-primary" onclick="reset( )">Reset</button>
+        </div>
+    </div>
+    <script src="./js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
